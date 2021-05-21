@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>留言板</title>
+		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+   		
+   		<style type="text/css">
+   			.parent{
+   				width: 800px;
+   				height: 600px;
+   				margin: 0 auto;
+   				padding-left: 160px;
+   			}
+   			h4{
+   				padding-top: 48px;
+   				padding-left: 60px;
+   				margin-bottom: 28px;
+   			}
+   			hr{
+   				width: 680px;
+   				border: 2px solid darksalmon;
+   			}
+   			#text{
+   				width: 600px;
+   				height: 300px;
+   				margin-left: 80px;
+   				margin-top: 36px;
+   			}
+   			#btn{
+   				width: 605px;
+   				height: 46px;
+   				margin-left: 80px;
+   				margin-top: 8px;
+   			}
+   		</style>
+	</head>
+	<body>
+		
+		<div class="parent">
+			<h4>留言内容：</h4>
+			<hr />
+			<div id="box"></div>
+			<textarea id="text"></textarea>
+			<br />
+			<input type="button" id="btn" value="发表留言" />
+		</div>
+		
+		
+		<script>
+			var num = 1;
+			$('#btn').click(function(){
+				var html = '<p><span>用户  ' + ' num ' + ' 说: </span> ' + 
+				$('#text').val() + '</p>' + $('#box').html();
+				$('#box').html(html);
+				$('#text').val(' ');
+				++num;
+			});
+		</script>
+	</body>
+</html>
