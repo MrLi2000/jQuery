@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>00title</title>
+      <script src="../jQuery版本/jquery-3.5.1.js"></script>
+        <style type="text/css">    </style>
+    </head>
+    <body>
+        <div class="list">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <div class="add">+添加</div>
+    </body>
+    <script>
+        $('.add').click(function() {
+            var str = '<li>4</li>';
+            $('.list li:last-child').after(str);
+        });
+    </script>
+</html
